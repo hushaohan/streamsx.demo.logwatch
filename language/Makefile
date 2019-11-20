@@ -1,6 +1,6 @@
 .PHONY: all clean 
 
-SPLC_FLAGS = -a -g
+SPLC_FLAGS = -a --data-directory=data
 SPLC = $(STREAMS_INSTALL)/bin/sc
 
 SPL_CMD_ARGS ?= 
