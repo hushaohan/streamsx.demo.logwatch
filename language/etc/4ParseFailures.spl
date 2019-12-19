@@ -1,4 +1,4 @@
-namespace streamsx.demo.logwatch.language;
+namespace com.ibm.streamsx.demo.logwatch.language;
 
 rstring flatten(list<rstring> lst)
 {
@@ -38,8 +38,8 @@ composite LogWatch {
                 list<rstring> tokens = tokenize(message, ";", false);
                 list<rstring> values = tokenize(tokens[1], "= ", false);
 
-                submit({time = RawFailures.time, 
-                        uid = values[2], euid = values[4], tty = values[6], rhost = values[9], 
+                submit({time = RawFailures.time,
+                        uid = values[2], euid = values[4], tty = values[6], rhost = values[9],
                         user = size(values) == 12 ? values[11]: ""}, Failures);
             }
         }

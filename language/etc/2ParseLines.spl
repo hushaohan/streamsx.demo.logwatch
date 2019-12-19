@@ -1,4 +1,4 @@
-namespace streamsx.demo.logwatch.language;
+namespace com.ibm.streamsx.demo.logwatch.language;
 
 rstring flatten(list<rstring> lst)
 {
